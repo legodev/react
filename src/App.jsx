@@ -7,18 +7,20 @@ import Intro3 from './components/Intro3'
 import Nav from './components/Nav'
 import Promo from './components/Promo'
 import Heading from './components/Heading'
+import Example from './components/Practice'
 
 function App() {
   return (
     <>
       <Header name="Anna" color="blue"/>
       <Nav/>
+      <Heading />
       <Promo />
       <Intro1 />
       <Intro2 />
       <Intro3 />
+      <Example />
       <Footer />
-      <Heading />
     </>
   )
 }
