@@ -11,7 +11,7 @@ import Heading from './components/Heading'
 function App() {
   return (
     <>
-      <Header />
+      <Header name="Anna" color="blue" />
       <Nav/>
       <Promo />
       <Intro1 />
