@@ -16,12 +16,12 @@ function App() {
       <Header name="Anna" color="blue"/>
       <Nav/>
       <PracticeTwo />
+      <Example />
       <Heading />
       <Promo />
       <Intro1 />
       <Intro2 />
       <Intro3 />
-      <Example />
       <Footer />
     </>
   )
