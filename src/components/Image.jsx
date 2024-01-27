@@ -1,7 +1,7 @@
 import avatar from '../assets/image.jpg'
 
 const styles = {
-  border: '2px solid #121212',
+  border: '2px solid red',
   borderRadius: '900px',
   width: '250px',
   height: '250px',
