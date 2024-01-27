@@ -9,10 +9,12 @@ import Promo from './components/Promo'
 import Heading from './components/Heading'
 import Example from './components/Practice'
 import PracticeTwo from './components/Practice2'
+import Image from './components/Image'
 
 function App() {
   return (
-    <>
+    <> 
+      <Image />
       <Header name="Anna" color="blue"/>
       <Nav/>
       <PracticeTwo />
