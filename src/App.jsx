@@ -3,39 +3,55 @@ import './App.css'
 
 function App() {
   const [form, setForm] = useState({
-    firstName: 'Leonardo',
-    lastName: 'González',
-    email: 'elmaslindo@gmail.com',
+    firstName: '',
+    lastName: '',
+    email: '',
   })
 
   function handleFirstName(e) {
-    setForm({ ...form, firstName: e.target.value });
-  }  
+    setForm({ ...form, firstName: e.target.value })
+  }
 
-  function handleLastName (e) {
-    setForm({ ...form, lastName: e.target.value });
-  } 
+  function handleLastName(e) {
+    setForm({ ...form, lastName: e.target.value })
+  }
 
-  function handleEmail (e) {
-    setForm({ ...form, email: e.target.value });
-  } 
+  function handleEmail(e) {
+    setForm({ ...form, email: e.target.value })
+  }
   return (
     <>
       <form action="">
         <label htmlFor="first">
           First Name:
-          <input type="text" id='first' onChange={handleFirstName} value={form.firstName} />
+          <input
+            type="text"
+            id="first"
+            onChange={handleFirstName}
+            value={form.firstName}
+          />
         </label>
         <label htmlFor="last">
           Last Name:
-          <input type="text" id='last' onChange={handleLastName} value={form.firstName} />
+          <input
+            type="text"
+            id="last"
+            onChange={handleLastName}
+            value={form.lastName}
+          />
         </label>
         <label htmlFor="email">
           Email:
-          <input type="email" id='email' onChange={handleEmail} value={form.firstName} />
+          <input
+            type="email"
+            id="email"
+            onChange={handleEmail}
+            value={form.email}
+          />
         </label>
-        <p>{form.firstName}</p>
-        <p>{form.lastName}</p>
+        <p>
+          {form.firstName} {' '} {form.lastName}
+        </p>
         <p>{form.email}</p>
       </form>
     </>
