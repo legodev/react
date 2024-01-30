@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import './App.css'
 // import Header from './Header'
 // import Footer from './components/Footer'
@@ -13,27 +14,34 @@ import './App.css'
 // import ModeToggler from './components/ModeToggler'
 
 function App() {
-  const input = document.querySelector("form")
-  let randonNum = Math.floor(Math.random() * 3) + 1;
+  let randonNum = Math.floor(Math.random() * 10) + 1
   // let numInput = prompt("Guess the number between 1 and 3")
   // alert(`Computer number: ${randonNum}, Your guess: ${numInput}`)
 
+  const [inputValue, setInputValue] = useState('')
+  const [message, setMessage] = useState('')
 
-  const send = (e) => {
-    e.preventDefault();
-    const data = input.innerText
-    if(data == randonNum) {
-      console.log("Congratulations!")
+  const handleChange = (e) => {
+    setInputValue(e.target.value)
+  }
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    if (inputValue == randonNum) {
+      setMessage("Congratulations! You guessed the number")
     } else {
-      console.log("Almost!")
+      setMessage("Almost... Try again!")
     }
   }
   return (
     <>
-    <form action='' method='GET'>
-      <input type="text" className='form' />
-      <input type="submit" value="Guess!" onSubmit={send}/>
-    </form>
+      <div>
+        <h1>Guess the number between 1 and 10</h1>
+      </div>
+      <form onSubmit={handleSubmit}>
+        <input type="number" onChange={handleChange} />
+        <input type="submit" value="Guess!" />
+      </form>
+      <p>{message}</p>
       {/* <ModeToggler /> */}
       {/* <Image />
       <Header name="Anna" color="blue"/>
