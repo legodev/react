@@ -10,13 +10,20 @@ import './App.css'
 // import Example from './components/Practice'
 // import PracticeTwo from './components/Practice2'
 // import Image from './components/Image'
-import ModeToggler from './components/ModeToggler'
+// import ModeToggler from './components/ModeToggler'
 
 function App() {
-
+  let randonNum = Math.floor(Math.random() * 3) + 1;
+  let numInput = prompt("Guess the number between 1 and 3")
+  alert(`Computer number: ${randonNum}, Your guess: ${numInput}`)
+  if(randonNum == numInput) {
+    console.log("Congratulations!")
+  } else {
+    console.log("Almost!")
+  }
   return (
     <>
-      <ModeToggler />
+      {/* <ModeToggler /> */}
       {/* <Image />
       <Header name="Anna" color="blue"/>
       <Nav/>
