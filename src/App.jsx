@@ -13,16 +13,27 @@ import './App.css'
 // import ModeToggler from './components/ModeToggler'
 
 function App() {
+  const input = document.querySelector("form")
   let randonNum = Math.floor(Math.random() * 3) + 1;
-  let numInput = prompt("Guess the number between 1 and 3")
-  alert(`Computer number: ${randonNum}, Your guess: ${numInput}`)
-  if(randonNum == numInput) {
-    console.log("Congratulations!")
-  } else {
-    console.log("Almost!")
+  // let numInput = prompt("Guess the number between 1 and 3")
+  // alert(`Computer number: ${randonNum}, Your guess: ${numInput}`)
+
+
+  const send = (e) => {
+    e.preventDefault();
+    const data = input.innerText
+    if(data == randonNum) {
+      console.log("Congratulations!")
+    } else {
+      console.log("Almost!")
+    }
   }
   return (
     <>
+    <form action='' method='GET'>
+      <input type="text" className='form' />
+      <input type="submit" value="Guess!" onSubmit={send}/>
+    </form>
       {/* <ModeToggler /> */}
       {/* <Image />
       <Header name="Anna" color="blue"/>
