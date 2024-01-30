@@ -10,15 +10,13 @@ import './App.css'
 // import Example from './components/Practice'
 // import PracticeTwo from './components/Practice2'
 // import Image from './components/Image'
-import Btn from './components/Btn'
+import ModeToggler from './components/ModeToggler'
 
 function App() {
-  const click = function () {
-    console.log("Hello World")
-  }
+
   return (
     <>
-      <Btn click={click} />
+      <ModeToggler />
       {/* <Image />
       <Header name="Anna" color="blue"/>
       <Nav/>
