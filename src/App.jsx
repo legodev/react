@@ -27,8 +27,6 @@ export default function Stopwatch() {
   }
 
   function handleRestart() {
-    setStartTime(0)
-    setNow(0)
     handleStart()
   }
   return (
