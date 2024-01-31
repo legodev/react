@@ -1,4 +1,3 @@
-// import { useState } from 'react'
 import { useState } from 'react';
 
 export default function Stopwatch() {
@@ -6,12 +5,10 @@ export default function Stopwatch() {
   const [now, setNow] = useState(null);
 
   function handleStart() {
-    // Empieza a contar.
     setStartTime(Date.now());
     setNow(Date.now());
 
     setInterval(() => {
-      // Actualiza el tiempo actual cada 10 milisegundos.
       setNow(Date.now());
     }, 10);
   }
