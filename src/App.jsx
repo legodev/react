@@ -1,14 +1,23 @@
-import { useState } from 'react'
+import Section from "./components/Section"
+import Heading from "./components/Heading"
 
-export default function TextInputWithFocusButton() {
-  const [message,setMessage] = useState(0)
-  function handleClick () {
-    setMessage(Math.round(Math.random() * 10))
-  }
+export default function App() {
+
   return (
     <>
-      <h1>{message}</h1>
-      <button onClick={handleClick}>Random</button>
+      <Section level={1}>
+        <Heading>
+          Hello World
+        </Heading>
+        <Section level={6}>
+          <Heading>
+            Bye Bye World
+          </Heading>
+          <Section level={2}>
+            <Heading>Another World</Heading>
+          </Section>
+        </Section>
+      </Section>
     </>
   )
 }
