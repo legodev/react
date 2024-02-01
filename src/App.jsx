@@ -1,24 +1,21 @@
 // import { useState } from 'react'
+import { useRef } from 'react'
 
-import { useRef } from "react"
+export default function TextInputWithFocusButton() {
+  const inputEl = useRef(null)
+  const onButtonClick = () => {
+    // `current` points to the mounted text input element
+    inputEl.current.focus()
+  }
 
-export default function Counter() {
-  // const [number, setNumber] = useState(0)
-  let ref = useRef(0)
-  // console.log(ref.current)
+  const fruits = ['Pear', 'Banana', 'Apple', 'Orange', 'Pineapple']
+  const [f1,f2,f3] = fruits
+  console.log(f1,f2,f3);
+
   return (
     <>
-      {/* <h1>Number: {number}</h1> */}
-      <h1>Ref: 0 + {ref.current}</h1>
-      <button
-        onClick={() => {
-          // setNumber(number + 1);
-          ref.current = ref.current + 1;
-          console.log(ref.current)
-        }}
-      >
-        +3
-      </button>
+      <input ref={inputEl} type="text" />
+      <button onClick={onButtonClick}>Focus the input</button>
     </>
   )
 }
