@@ -1,20 +1,9 @@
-import Fruits from './/components/Fruits'
-import FruitsCounter from './components/FruitsCounter'
-import { useState } from 'react'
 
-function App() {
-  const [fruits] = useState([
-    { fruitName: 'apple', id: 1 },
-    { fruitName: 'apple', id: 2 },
-    { fruitName: 'plum', id: 3 },
-  ])
-  return (
-    <div className="app">
-      <h1>Where should the state go?</h1>
-      <Fruits fruits={fruits} />
-      <FruitsCounter fruits={fruits} />
+export default function App() {
+  return(
+    <div>
+      <h1>Hello React Router</h1>
+      <p>My first React Router app</p>
     </div>
   )
 }
-
-export default App
