@@ -1,24 +1,20 @@
-import Section from './components/Section'
-import Heading from './components/Heading'
+import Fruits from './/components/Fruits'
+import FruitsCounter from './components/FruitsCounter'
+import { useState } from 'react'
 
-export default function App() {
+function App() {
+  const [fruits] = useState([
+    { fruitName: 'apple', id: 1 },
+    { fruitName: 'apple', id: 2 },
+    { fruitName: 'plum', id: 3 },
+  ])
   return (
-    <>
-      <Section level={1}>
-        <Heading>Hello World</Heading>
-        <Section level={6}>
-          <Heading>Bye Bye World</Heading>
-          <section>
-            <Heading>Bye Bye World 2 h6</Heading>
-          </section>
-          <Section level={2}>
-            <Heading>Another World</Heading>
-            <div>
-              <Heading>Another World h2</Heading>
-            </div>
-          </Section>
-        </Section>
-      </Section>
-    </>
+    <div className="app">
+      <h1>Where should the state go?</h1>
+      <Fruits fruits={fruits} />
+      <FruitsCounter fruits={fruits} />
+    </div>
   )
 }
+
+export default App
