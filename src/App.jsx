@@ -1,19 +1,30 @@
-import { Routes, Route, Link } from 'react-router-dom'
-import Title from './components/Title'
-import About from './components/About'
 import './App.css'
+import Homepage from './components/HomePage'
+import AboutLittleLemon from './components/AboutLittleLemon'
+import Contact from './Contact'
+import { Routes, Route, Link } from 'react-router-dom'
 
-export default function App() {
+function App() {
   return (
     <div>
-      <nav className='navbar'>
-        <Link to="/">Home</Link>
-        <Link to="/about-me">About Me</Link>
+      <nav className="navbar">
+        <Link to="/" className="nav-item">
+          Homepage
+        </Link>
+        <Link to="/about" className="nav-item">
+          About Little Lemon
+        </Link>
+        <Link to="/contact" className="nav-item">
+          Contact
+        </Link>
       </nav>
       <Routes>
-        <Route path="/" element={<Title />} />
-        <Route path="/about-me" element={<About />} />
+        <Route path="/" element={<Homepage />} />
+        <Route path="/about" element={<AboutLittleLemon />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </div>
   )
 }
+
+export default App
