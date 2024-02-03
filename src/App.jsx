@@ -1,9 +1,14 @@
+import { Routes, Route } from 'react-router-dom'
+import Title from './components/Title'
+import About from './components/About'
 
 export default function App() {
-  return(
+  return (
     <div>
-      <h1>Hello React Router</h1>
-      <p>My first React Router app</p>
+      <Routes>
+        <Route path="/" element={<Title />} />
+        <Route path="/about-me" element={<About />} />
+      </Routes>
     </div>
   )
 }
