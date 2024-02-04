@@ -1,30 +1,14 @@
-import './App.css'
-import Homepage from './components/HomePage'
-import AboutLittleLemon from './components/AboutLittleLemon'
-import Contact from './Contact'
-import { Routes, Route, Link } from 'react-router-dom'
+// import CurrentMessage from "./components/CurrentMessage"
+import getDay from "./scripts/Date"; // Ruta a la función
 
 function App() {
+  const day = getDay("en-EN");
+
   return (
-    <div>
-      <nav className="navbar">
-        <Link to="/" className="nav-item">
-          Homepage
-        </Link>
-        <Link to="/about" className="nav-item">
-          About Little Lemon
-        </Link>
-        <Link to="/contact" className="nav-item">
-          Contact
-        </Link>
-      </nav>
-      <Routes>
-        <Route path="/" element={<Homepage />} />
-        <Route path="/about" element={<AboutLittleLemon />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
+    <div className="app">
+      <h1>{day}</h1>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
