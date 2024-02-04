@@ -1,4 +1,19 @@
-export default function CurrentMessage () {
-  const day = new Date().getDay()
-  return <div>{day}</div>
+import Workdays from './Workdays'
+import Weekends from './Weekends'
+import ErrorComponent from './ErrorComponent'
+
+export default function CurrentMessage({ day }) {
+  const weekday = day >= 1 && day <= 5
+  const weekend = day >= 6 && day <= 7
+  let message
+
+  if (weekday) {
+    message = <Workdays />
+  } else if (weekend) {
+    message = <Weekends />
+  } else {
+    message = <ErrorComponent />
+  }
+
+  return <div>{message}</div>
 }
